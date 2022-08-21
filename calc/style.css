@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     padding: 0;
     margin: 0;
@@ -18,4 +19,26 @@ p {
 .alert {
     border:1px solid rgb(255, 156, 156);
     color: rgb(163, 0, 0);
+=======
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+p {
+    margin: 50px auto;
+    border: 1px solid #EEE;
+    color: rgb(8, 5, 5);
+    width: fit-content;
+    padding: 20px;
+    font-weight: bold;
+}
+.alert {
+    border:1px solid rgb(255, 156, 156);
+    color: rgb(163, 0, 0);
+>>>>>>> 4f66ff2a2a3dfedb2bd23e7e20e2203ebe3c4312
 }
