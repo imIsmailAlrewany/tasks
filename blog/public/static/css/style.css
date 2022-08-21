@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    --black: #111;
+    --secondary-black: #666;
+    --btn-blue: ;
+}
+a, button, input[type="submit"] {
+    padding: 5px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+section.mt {
+    margin-top: 30px;
+}
+.nav ul li a:hover, .nav ul li a.active, aside .search i, aside p, .all .empty a, main article.all > div div.bowls ul li a:hover, form.add-comment > div i {
+    color: var(--secondary-black);
+}
+.nav .logo::selection, .all .empty a::selection {
+    background-color: #fff;
+}
+.nav ul li a, .all .empty a, .error, main article button a, main article.all > div div.bowls ul li a {
+    text-decoration: none;
+}
+.nav .logo, .nav ul li a, main article button a, main article.all > div div.bowls ul li a {
+    color: var(--black);
+}
+/* start nav */
+.nav {
+    padding: 20px;
+    box-shadow: 1px 0 5px #999;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+}
+.nav .logo {
+    font-size: 2rem;
+    font-family: 'Rock Salt', cursive;
+}
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.nav ul li a {
+    margin-right: 10px;
+}
+aside .content, .all .empty, form input, form textarea, div.pic {
+    border: 1px solid #ccc;
+}
+aside .content i, .all .empty a {
+    font-size: 2.5rem;
+}
+.nav .logo, .center, aside .content h3, aside .content i, aside p {
+    text-align: center;
+}
+/* end nav */
+/* start side */
+.side-by {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside {
+    width: 20%;
+    position: fixed;
+    right: 10%;
+    top: 176px;
+}
+aside .search {
+    position: relative;
+}
+aside .search input {
+    width: 100%;
+    padding: 7.5px 10px;
+    outline: none;
+}
+aside .search i {
+    position: absolute;
+    right: 5px;
+    bottom: 50%;
+    font-size: 1.2rem;
+    padding-left: 5px;
+    border-left: 1px solid #999;
+}
+aside .search i, .all .empty, .background {
+    transform: translateY(50%);
+}
+aside .content {
+    padding: 10px;
+    margin-top: 20px;
+}
+aside .content h3 {
+    font-weight: 500;
+}
+aside .content i {
+    margin: 20px 0;
+    display: block;
+}
+aside p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+/* end side */
+/* start all page style */
+main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.all .empty {
+    width: 80%;
+    margin: 0 auto;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main article.all > div.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main article {
+    margin-bottom: 20px;
+    background-color: #EEE;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+main article.all > div.head div.bowls {
+    position: relative;
+    cursor: pointer;
+}
+main article.all > div.head div.bowls ul {
+    list-style-type: none;
+    position: absolute;
+    display: none;
+    left: -100px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+main article.all > div.head div.bowls i:focus ul {
+    display: block;
+}
+main article.all > div.head div.bowls ul li {
+    padding: 10px 25px;
+    text-align: center;
+}
+main article.all > div.head div.bowls ul li:first-child {
+    border-bottom: 1px solid #ccc;
+}
+main article.all {
+    height: 130px;
+}
+main article h2 {
+    text-transform: capitalize;
+}
+main article.all h2 {
+    font-size: 1.25rem;
+}
+main article h2.single {
+    margin-bottom: 20px;
+}
+main article h2.single + p {
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+main article.all p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+main article button {
+    margin-left: 10px;
+    outline: none;
+}
+main article .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.background {
+    background-color: #ccc;
+    height: 180px;
+    width: 20%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end all page style */
+/* start add/edit */
+form.add {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+form input, form textarea {
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form.add textarea {
+    height: 220px;
+}
+form input::placeholder, form textarea::placeholder {
+    letter-spacing: 1px;
+}
+form .alert {
+    padding-bottom: 10px;
+    font-size: 0.85rem;
+    color: var(--black);
+}
+/* end add/edit */
+/* start single */
+.add-comment {
+    display: flex;
+    flex-wrap: wrap;
+}
+.add-comment .inputs {
+    width: 80%;
+    margin-left: 20px;
+}
+.add-comment input, form.add-comment textarea {
+    border-radius: 5px;
+    padding: 8px 10px;
+    width: 80%;
+}
+.add-comment textarea {
+    height: 80px;
+}
+div.pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+}
+.add-comment > div i {
+    font-size: 1.5rem;
+}
+.add-comment > .inputs input[type="submit"] {
+    margin: 0;
+}
+
+/* end single */
+/* start error */
+.error {
+    background-color: var(--secondary-black);
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+.msg {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/* end error */
+

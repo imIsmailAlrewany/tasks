@@ -1,0 +1,41 @@
+{{>header}}
+{{>navbar}}
+    <section class="container mt side-by">
+        <main>
+            {{#if blog}}
+                {{>side}}
+                <article>
+                    <h2 class="show-title single">{{blog.title}}</h2>
+                    <p class="show-content">{{blog.content}}</p>
+                </article>
+                {{#if comments}}
+                    {{#each comments}}
+                        <div class="comments">
+                            <div class="pic">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="comment">
+                                <header>
+                                    <h3 class="user-name">{{this.name}}</h3>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </header>
+                                <p class="comment-content">{{this.comment}}</p>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/if}}
+                <form class="add-comment" method="post">
+                    <div class="pic">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="name" placeholder="Your Name">
+                        <textarea name="comment" placeholder="Comment Details"></textarea>
+                        <input type="submit" value="Comment">
+                    </div>
+                </form>
+            {{/if}}
+        </main>
+        {{>side}}
+    </section>
+{{>footer}}

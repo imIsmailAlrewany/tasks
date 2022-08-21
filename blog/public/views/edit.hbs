@@ -1,0 +1,16 @@
+{{>header}}
+{{>navbar}}
+    <section class="container mt">
+        <form class="add" action="" method="post">
+            <input class="title" type="text" placeholder="Blog Title" name="title" value="{{blog.title}}">
+            {{#if error.title}}
+            <p class="alert">{{error.title}}</p>
+            {{/if}}
+            <textarea class="content" name="content" id="" placeholder="Blog Content">{{blog.content}}</textarea>
+            {{#if error.content}}
+            <p class="alert">{{error.content}}</p>
+            {{/if}}
+            <input type="submit" value="Edit">
+        </form>
+    </section>
+{{>footer}}

@@ -1,0 +1,38 @@
+{{>header}}
+{{>navbar}}
+    <section class="container mt side-by">
+        <main class="all">
+            {{#unless blogs}}
+            <div class="empty">
+                <a href="/add">&plus;</a>
+            </div>
+            {{else}}
+                {{#each blogs}}
+                    <article class="all">
+                        <div class="head">
+                            <h2 class="show-title">{{this.title}}</h2>
+                            <div class="bowls">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <ul class="hidden-list">
+                                    <li><a href="">Edit</a></li>
+                                    <li><a href="">Delete</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="show-content">{{this.content}}</p>
+                        <div class="buttons">
+                            <button class="show-single" type="button"><a href="/delete/{{this._id}}">Delete</a></button>
+                            <button class="show-single" type="button"><a href="/edit/{{this._id}}">Edit</a></button>
+                            <button class="show-single" type="button"><a href="/single/{{this._id}}">Read More</a></button>
+                        </div>
+                    </article>
+                {{/each}}
+            {{/unless}}
+        </main>
+            {{#if blogs}}
+            {{>side}}
+            {{else}}
+            <div class="background">Add Author</div>
+            {{/if}}
+    </section>
+{{>footer}}
